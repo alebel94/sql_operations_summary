@@ -1,0 +1,21 @@
+GET THE KEY FROM GOOGLE CLOUD:
+
+1) Go to google cloud console and sign in: https://console.cloud.google.com/
+2) Create a project
+3) Go to IAM & Admin --> Service Accounts
+4) + CREATE SERVICE ACCOUNT
+5) In Service account details fill: Service account name, Service account ID, 
+	Service account description then click --> create
+6) In Grant this service account access to project: Select a role --> BigQuery
+	--> BigQuery User
+7) In Grant users access to this service account: Fill Service account users
+	role with email then click --> Done
+8) Click on account just created --> KEYS --> ADD KEY --> Create new key -->
+	JSON then click --> CREATE. This should download JSON Key
+
+
+UPLOAD KEY FOR USE:
+For reference: 
+https://cloud.google.com/bigquery/docs/reference/libraries#client-libraries-usage-python
+1) With command prompt example:
+set GOOGLE_APPLICATION_CREDENTIALS=C:\Users\username\Downloads\my-key.json
